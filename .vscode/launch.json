@@ -1,0 +1,85 @@
+{
+    "configurations": [
+        {
+            "name": "Start mtxxprocessor",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "npx",
+            "cwd": "${workspaceFolder}/mtxxprocessor",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--open",
+                "test/flpSandbox.html#mtxxprocmtxxprocessor-tile"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "DEBUG": "--inspect",
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=800&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start mtxxprocessor Mock",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/mtxxprocessor",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-mock.yaml",
+                "--open",
+                "test/flpSandbox.html#mtxxprocmtxxprocessor-tile"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=800&sap-ui-xx-viewCache=false"
+            }
+        },
+        {
+            "name": "Start mtxxprocessor Local",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/mtxxprocessor",
+            "runtimeExecutable": "npx",
+            "windows": {
+                "runtimeExecutable": "npx.cmd"
+            },
+            "runtimeArgs": [
+                "fiori",
+                "run"
+            ],
+            "args": [
+                "--config",
+                "./ui5-local.yaml",
+                "--open",
+                "test/flpSandbox.html#mtxxprocmtxxprocessor-tile"
+            ],
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnSessionStart",
+            "outputCapture": "std",
+            "port": 9229,
+            "env": {
+                "FIORI_TOOLS_URL_PARAMS": "sap-client=800&sap-ui-xx-viewCache=false"
+            }
+        }
+    ],
+    "compounds": []
+}
